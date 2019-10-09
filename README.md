@@ -1,2 +1,2 @@
 # 990andMe
-Find the fund of your life!
+Find the fund for you!
