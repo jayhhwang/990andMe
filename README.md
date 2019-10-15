@@ -19,16 +19,17 @@ Each electronic 990 filing is available as a unique XML file in the “irs-form-
 # Architecture
 The data pipeline ingests from S3 into a Spark Cluster of EC2 Instances. The data is then processed using PySpark and uploaded into a MySQL database. A quick demo of the database is shown using a Tableau dashboard using live data connected to the MySQL database.  
   
+
+![990andMe Pipeline](https://github.com/jayhhwang/990andMe/blob/master/images/pipeline.png)
+
+  
 Why did I choose my technology stack?  
   
 S3 - IRS 990 forms were uploaded into an open S3 bucket  
 Spark/EC2 - Flexible, scalable way to quickly manipulate XML files using Spark DataFrames  
 MySQL - A schema-defined, relational database works well with the structured information provided by the XML files  
 Tableau - A quick and easy way to demo use cases for the database  
-
-
-![990andMe Pipeline](https://github.com/jayhhwang/990andMe/blob/master/images/pipeline.png)
-
+  
 # Engineering Challenges
 Challenge #1:  
 XML needs to be converted into a document that more readily stored by databases and processed by data scientists  
